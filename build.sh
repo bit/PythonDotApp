@@ -71,6 +71,7 @@ for lib in \
     opt/openssl/lib/libcrypto.1.0.0.dylib \
     opt/openssl/lib/libssl.1.0.0.dylib \
     opt/readline/lib/libreadline.6.dylib \
+    opt/readline/lib/libreadline.6.3.dylib \
     opt/sqlite/lib/libsqlite3.0.dylib \
     opt/xz/lib/liblzma.5.dylib \
 ; do
@@ -124,18 +125,21 @@ for plib in \
             $BREW/opt/openssl/lib/libcrypto.1.0.0.dylib \
             $BREW/opt/openssl/lib/libssl.1.0.0.dylib \
             $BREW/opt/readline/lib/libreadline.6.dylib \
+            $BREW/opt/readline/lib/libreadline.6.3.dylib \
             $BREW/opt/sqlite/lib/libsqlite3.0.dylib \
             $BREW/opt/xz/lib/liblzma.5.dylib \
             $PREFIX/lib/libcrypto.1.0.0.dylib \
             $PREFIX/lib/libexslt.0.dylib \
             $PREFIX/lib/liblzma.5.dylib \
             $PREFIX/lib/libreadline.6.dylib \
+            $PREFIX/lib/libreadline.6.3.dylib \
             $PREFIX/lib/libsqlite3.0.dylib \
             $PREFIX/lib/libssl.1.0.0.dylib \
             $PREFIX/lib/libxml2.2.dylib \
             $PREFIX/lib/libxslt.1.dylib \
             /usr/lib/libexslt.0.dylib \
             /usr/lib/libreadline.6.dylib \
+            /usr/lib/libreadline.6.3.dylib \
             /usr/lib/libxml2.2.dylib \
             /usr/lib/libxslt.1.dylib \
         ; do
