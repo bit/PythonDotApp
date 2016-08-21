@@ -158,6 +158,8 @@ export SSL_CERT_DIR="\$PREFIX/etc/openssl/certs"
 EOF
 chmod +x "$NAME.app/Contents/MacOS/$NAME"
 
+test -e Resources && cp -r Resources "${NAME}.app/Contents/Resources"
+
 cat > "$NAME.app/Contents/Info.plist" << EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
