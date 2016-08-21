@@ -218,3 +218,10 @@ test -e test.py && "${NAME}.app/Contents/Python/bin/python3.5" test.py
 
 find "${NAME}.app" -d -name "__pycache__" -type d -exec rm -r "{}" \;
 find "${NAME}.app" -name "*.pyc" -exec rm "{}" \;
+
+mkdir dmg
+ln -s /Applications "dmg/Applications"
+mv "${NAME}.app" dmg/
+hdiutil create -srcfolder "dmg" -volname "${NAME}" -format UDZO "${NAME}.tmp.dmg"
+hdiutil convert -format UDZO -imagekey zlib-level=9 -o "${NAME}.dmg" "${NAME}.tmp.dmg"
+rm "${NAME}.tmp.dmg"
