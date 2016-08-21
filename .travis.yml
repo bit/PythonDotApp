@@ -1,0 +1,6 @@
+os: osx
+sudo: required
+language: generic
+
+install:
+     - "./build.sh"

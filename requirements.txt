@@ -1,0 +1,8 @@
+# add additional dependencies here
+lxml
+# i.e. add PyQt5
+#PyQt5
+
+# main application
+# replace with your module that can be run via python3 -m application
+./example
