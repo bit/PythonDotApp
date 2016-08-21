@@ -1,10 +1,11 @@
 #!/bin/bash
 set -e
 
-NAME="PythonSkeleton"
-IDENTIFIER="com.example.PythonSkeleton"
+NAME="PythonDotApp"
+IDENTIFIER="com.github.bit.PythonDotApp"
 OSXVERSION=10.9
 APPLICATION=application
+VERSION=`git tag | head -1 | sed "s/$NAME-//"`
 
 BASE=`pwd`
 PREFIX="$BASE/dist"
@@ -179,7 +180,7 @@ cat > "$NAME.app/Contents/Info.plist" << EOF
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.8</string>
+	<string>${VERSION}</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleSupportedPlatforms</key>
