@@ -17,7 +17,11 @@ class Application(tk.Frame):
         self.quit.pack(side="bottom")
 
     def say_hi(self):
-        print("hi there, everyone!")
+        hello = "Hello World\n(click me)"
+        if self.hi_there["text"] == hello:
+            self.hi_there["text"] = 'Hi there!\n(click me)'
+        else:
+            self.hi_there["text"] = hello
 
 root = tk.Tk()
 app = Application(master=root)
